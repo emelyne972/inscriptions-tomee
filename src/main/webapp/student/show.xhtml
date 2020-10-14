@@ -48,6 +48,33 @@
 </h:column>
 
 </h:dataTable>
+
+<br />
+
+<h:dataTable value="#{manager.formationList}" var="s"
+             styleClass="formation-table"
+             headerClass="formation-table-header"
+             rowClasses="formation-table-odd-row,formation-table-even-row">
+    <h:column>
+        <!-- column header -->
+        <f:facet name="header">Formation N°</f:facet>
+        <!-- row record attribute -->
+        #{s.id}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Intitulé</f:facet>
+        #{s.string}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Durée</f:facet>
+        #{s.time}
+    </h:column>
+
+    </h:dataTable>
+
+
 </h:body>
 
 </html>
