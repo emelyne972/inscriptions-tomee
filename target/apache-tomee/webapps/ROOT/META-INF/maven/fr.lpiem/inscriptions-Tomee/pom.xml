@@ -27,7 +27,21 @@
       <version>8.0-4</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+    <groupId>org.apache.myfaces.core</groupId>
+    <artifactId>myfaces-api</artifactId>
+    <version>2.1.8</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.myfaces.core</groupId>
+    <artifactId>myfaces-impl</artifactId>
+    <version>2.1.8</version>
+    <scope>provided</scope>
+</dependency>
   </dependencies>
+  
 
   <build>
     <plugins>
@@ -64,3 +78,4 @@
   </repositories>
 
 </project>
+
