@@ -74,6 +74,28 @@
 
     </h:dataTable>
 
+    <h:dataTable value="#{manager.inscriptionList}" var="s"
+             styleClass="inscription-table"
+             headerClass="inscription-table-header"
+             rowClasses="inscription-table-odd-row,inscription-table-even-row">
+    <h:column>
+        <!-- column header -->
+        <f:facet name="header">Inscription N°</f:facet>
+        <!-- row record attribute -->
+        #{s.id}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Identifiant</f:facet>
+        #{s.string}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Durée</f:facet>
+        #{s.time}
+    </h:column>
+
+    </h:dataTable>
 
 </h:body>
 
