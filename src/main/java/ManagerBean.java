@@ -11,13 +11,13 @@ public class ManagerBean {
         return version;
     }
     
-    /*public ArrayList<Student> getStudentList(){
+    public ArrayList<Student> getStudentList(){
     public List<Student> getStudentList = Arrays.asList(
     new Student[] {
         new Student (0, "Dupont","pierre","14/01/1996","06 96 00 00 00"),
         new Student (1, "DuBois","fred","01/01/1996","06 96 00 00 00")
     }    
-    );}*/
+    );}
 }
 
 
