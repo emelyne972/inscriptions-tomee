@@ -24,27 +24,27 @@ rowClasses="student-table-odd-row,student-table-even-row">
 <!-- column header -->
 <f:facet name="header">Étudiant N°</f:facet>
 <!-- row record attribute -->
-#{s.id}
+#{student.id}
 </h:column>
 
 <h:column>
 <f:facet name="header">Nom</f:facet>
-#{s.lastName}
+#{student.lastName}
 </h:column>
 
 <h:column>
 <f:facet name="header">Prénom</f:facet>
-#{s.firstName}
+#{student.firstName}
 </h:column>
 
 <h:column>
 <f:facet name="header">Date de Naissance</f:facet>
-#{s.birthdate}
+#{student.birthdate}
 </h:column>
 
 <h:column>
 <f:facet name="header">Téléphone</f:facet>
-#{s.phoneNumber}
+#{student.phoneNumber}
 </h:column>
 
 </h:dataTable>
