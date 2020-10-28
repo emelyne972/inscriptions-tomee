@@ -16,10 +16,10 @@
 
 <h:body>
 
-    <h:dataTable value="#{manager.studentList}" var="s"
-    styleClass="student-table"
-    headerClass="student-table-header"
-    rowClasses="student-table-odd-row,student-table-even-row">
+<h:dataTable value="#{manager.studentList}" var="s"
+styleClass="student-table"
+headerClass="student-table-header"
+rowClasses="student-table-odd-row,student-table-even-row">
 <h:column>
 <!-- column header -->
 <f:facet name="header">Étudiant N°</f:facet>
@@ -50,15 +50,15 @@
 </h:dataTable>
 
 <br />
-
+<!--
 <h:dataTable value="#{manager.formationList}" var="s"
              styleClass="formation-table"
              headerClass="formation-table-header"
              rowClasses="formation-table-odd-row,formation-table-even-row">
     <h:column>
-        <!-- column header -->
+        
         <f:facet name="header">Formation N°</f:facet>
-        <!-- row record attribute -->
+        
         #{s.id}
     </h:column>
 
@@ -79,9 +79,9 @@
              headerClass="inscription-table-header"
              rowClasses="inscription-table-odd-row,inscription-table-even-row">
     <h:column>
-        <!-- column header -->
+         
         <f:facet name="header">Inscription N°</f:facet>
-        <!-- row record attribute -->
+        
         #{s.id}
     </h:column>
 
@@ -91,12 +91,12 @@
     </h:column>
 
     <h:column>
-        <f:facet name="header">Durée</f:facet>
+        <f:facet name="header"></f:facet>
         #{s.time}
     </h:column>
 
     </h:dataTable>
-
+-->
 </h:body>
 
 </html>
