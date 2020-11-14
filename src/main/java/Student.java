@@ -1,40 +1,11 @@
-import javax.persistence.Id;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+//import java.util.Arrays;
+import javax.inject.Named;
+//import java.util.ArrayList;
 
+import javax.enterprise.context.RequestScoped;
+@Named("student")
+@RequestScoped
 
-/*
-public class Student{
-
-    private int id;
-    private String lastname;
-    private String firstname;
-    private String datebirth;
-    private String phoneNumber; 
-
-    public Student(int id, String lastname, String firstname, String datebirth, String phoneNumber) {
-
-        this.id = id;
-        this.lastname = lastname;
-        this.firstname = firstname;
-        this.datebirth = datebirth;
-        this.phoneNumber = phoneNumber;
-    }
-    public String getStudentList(){
-
-        System.println(this.id, this.lastname, this.firstname, this.datebirth, this.phoneNumber);
-    }
-
-    public void setStudentList(){
-
-        new Student (0, "Dupont","pierre","14/01/1996","06 96 00 00 00");
-        new Student (1, "DuBois","fred","01/01/1996","06 96 00 00 00");
-        
-    }
-
-}
-*/
 
 public class Student{
 
@@ -42,7 +13,7 @@ public class Student{
     private String lastName;
     private String firstName;
     private String birthdate;
-    private String phoneNumber; 
+    private String phoneNumber;
 
     public int getId(){
         return id;
@@ -60,20 +31,35 @@ public class Student{
         return phoneNumber;
     }
     public void setId(int id){
-        this.id = 0;
+        this.id = id;
     }
     public void setLastName(String lastName){
-        this.lastName = "JEAN";
+        this.lastName = lastName;
     }
     public void setFirstName(String firstName){
-        this.firstName = "Robert";
-    }
+        this.firstName = firstName;
+    }  
     public void setBirthdate(String birthdate){
-        this.birthdate = "14/02/2003";
-    }
+        this.birthdate = birthdate;
+    }  
     public void setPhoneNumber(String phoneNumber){
-        this.phoneNumber = "0696784521";
+        this.phoneNumber = phoneNumber;
     }
+    public Student(){
+        this.id = 0;
+        this.lastName = "THOME";
+        this.firstName = "Emelyne";
+        this.birthdate = "13/08/1999";
+        this.phoneNumber = "0696168991";
+    }
+    public Student(int id, String lastName, String firstName, String birthdate, String phoneNumber){
+        this.id = id;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.birthdate = birthdate;
+        this.phoneNumber = phoneNumber;
+    }
+    
 }
 
 
