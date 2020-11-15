@@ -1,3 +1,4 @@
+  
 //import java.util.Arrays;
 import javax.inject.Named;
 //import java.util.ArrayList;
@@ -47,10 +48,10 @@ public class Student{
     }
     public Student(){
         this.id = 0;
-        this.lastName = "THOME";
-        this.firstName = "Emelyne";
-        this.birthdate = "13/08/1999";
-        this.phoneNumber = "0696168991";
+        this.lastName = "JEAN";
+        this.firstName = "Robert";
+        this.birthdate = "14/02/2008";
+        this.phoneNumber = "0696145200";
     }
     public Student(int id, String lastName, String firstName, String birthdate, String phoneNumber){
         this.id = id;
@@ -61,6 +62,3 @@ public class Student{
     }
     
 }
-
-
-
