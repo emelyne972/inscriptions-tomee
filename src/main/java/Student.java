@@ -1,11 +1,4 @@
-import javax.inject.Named;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import javax.enterprise.context.RequestScoped;
-@Named("manager.studentList")
-@RequestScoped
-
 
 public class Student{
 
@@ -62,11 +55,11 @@ public class Student{
         this.birthdate = birthdate; 
         this.phoneNumber = phoneNumber; 
     }
-     
-    private static final ArrayList<Student> studentList = Student.asList(new Student[]{new Student(0,"JEAN","Robert","14/02/2008","0696145200")});
+    
+    private static ArrayList<Student> studentList = Student.asList(new Student[]{new Student(0,"JEAN","Robert","14/02/2008","0696145200")});
+    
     public static ArrayList<Student> asList(Student[] students) {
         return  studentList;
     }
-
 
 }
