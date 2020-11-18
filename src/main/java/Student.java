@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Student{
 
@@ -55,10 +56,10 @@ public class Student{
         this.birthdate = birthdate; 
         this.phoneNumber = phoneNumber; 
     }
-    
-    
-    public static   Student[] asList(Student[] students) {
-        return  students;
-    }
+
+	public static List<Student> asList(List<Student> students) {
+		return students;
+	}
+
 
 }
