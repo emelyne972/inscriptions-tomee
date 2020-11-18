@@ -56,10 +56,9 @@ public class Student{
         this.phoneNumber = phoneNumber; 
     }
     
-    private static ArrayList<Student> studentList = Student.asList(new Student[]{new Student(0,"JEAN","Robert","14/02/2008","0696145200")});
     
-    public static ArrayList<Student> asList(Student[] students) {
-        return  studentList;
+    public static   Student[] asList(Student[] students) {
+        return  students;
     }
 
 }
