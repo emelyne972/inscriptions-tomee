@@ -3,7 +3,6 @@ import javax.enterprise.context.RequestScoped;
 @Named("manager")
 @RequestScoped
 
-
 public class ManagerBean {
 
     private String version = "1.0-SNAPSHOT";

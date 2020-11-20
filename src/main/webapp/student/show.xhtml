@@ -4,9 +4,9 @@
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-         xmlns:f="http://java.sun.com/jsf/core"
-         xmlns:h="http://java.sun.com/jsf/html"
-         xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
 
@@ -15,11 +15,12 @@
 </h:head>
 
 <h:body>
-
-    <h:dataTable value="#{manager.studentList}" var="s"
+    
+    <h:dataTable  value="#{manager.studentList}" var="s"
              styleClass="student-table"
              headerClass="student-table-header"
              rowClasses="student-table-odd-row,student-table-even-row">
+             
     <h:column>
         <!-- column header -->
         <f:facet name="header">Étudiant N°</f:facet>
@@ -45,6 +46,62 @@
     <h:column>
         <f:facet name="header">Téléphone</f:facet>
         #{s.phoneNumber}
+    </h:column>
+
+    </h:dataTable>
+
+    <!-- TABLEAU DE FORMATION -->
+    
+    <h:dataTable value="#{manager.listFormation}" var="f"
+             styleClass="formation-table"
+             headerClass="formation-table-header"
+             rowClasses="formation-table-odd-row,registration-table-even-row">
+    <h:column>
+        <!-- column header -->
+        <f:facet name="header">Formation N°</f:facet>
+        <!-- row record attribute -->
+        #{f.id}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Nom</f:facet>
+        #{f.name}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Durée</f:facet>
+        #{f.duree}
+    </h:column>
+
+    </h:dataTable>
+
+    <!-- TABLEAU D'INSCRIPTION -->
+    
+    <h:dataTable value="#{manager.registrationList}" var="r"
+             styleClass="registration-table"
+             headerClass="registration-table-header"
+             rowClasses="registration-table-odd-row,registration-table-even-row">
+             
+    <h:column>
+        <!-- column header -->
+        <f:facet name="header">Inscription N°</f:facet>
+        <!-- row record attribute -->
+        #{r.id}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Etudiant</f:facet>
+        #{r.studentId}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Formation</f:facet>
+        #{r.formationId}
+    </h:column>
+
+    <h:column>
+        <f:facet name="header">Date de début</f:facet>
+        #{r.registDate}
     </h:column>
 
     </h:dataTable>
