@@ -22,10 +22,12 @@
              rowClasses="student-table-odd-row,student-table-even-row">
              
     <h:column>
+        <h:link outcome="etudiant">
         <!-- column header -->
         <f:facet name="header">Étudiant N°</f:facet>
         <!-- row record attribute -->
         #{s.id}
+    </h:link>
     </h:column>
 
     <h:column>
@@ -81,7 +83,7 @@
              styleClass="registration-table"
              headerClass="registration-table-header"
              rowClasses="registration-table-odd-row,registration-table-even-row">
-             
+
     <h:column>
         <!-- column header -->
         <f:facet name="header">Inscription N°</f:facet>
