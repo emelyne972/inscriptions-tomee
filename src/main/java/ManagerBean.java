@@ -1,5 +1,7 @@
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.annotation.ManagedProperty;
+import javax.inject.Inject;
 @Named("manager")
 @RequestScoped
 
@@ -13,6 +15,9 @@ public class ManagerBean {
         new Student(1,"MARINE", "Aude", "15/02/2002","0696154700")
         };
 
+    @Inject @ManagedProperty(value ="#{id}")
+    private int id;
+
     public String getVersion() {
 
         return version;
@@ -22,12 +27,13 @@ public class ManagerBean {
         
         return asList(students);
     }
-
+    public int getParam() {
+        return this.id;
+    }
     private Student[] asList(Student[] students2) {
         return students2;
     }
-
     
-
+    
 
 }

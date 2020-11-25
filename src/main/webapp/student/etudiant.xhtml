@@ -11,7 +11,7 @@
         <h1>Hello World</h1>
         <h:form>
             <h:outputLabel for="input" value="Input" />
-            <h:inputText id="input" value="#{bean.input}" />
+            <h:inputText id="input" value="#{param.id}" />
             <h:commandButton value="Submit" action="#{bean.submit}">
                 <f:ajax execute="@form" render=":output" />
             </h:commandButton>
