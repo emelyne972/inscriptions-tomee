@@ -23,15 +23,17 @@
              headerClass="student-table-header"
              rowClasses="student-table-odd-row,student-table-even-row">
 
-    <h:column>
-        <h:link outcome="etudiant" value="#{s.id} #{s.lastName} #{s.firstName} #{s.birthdate} #{s.phoneNumber}"  />
-    </h:column>
-          <!--   
-    <h:column>
-         
-        <f:facet name="header">Étudiant N°</f:facet>
+
         
-        #{s.id}
+
+    <h:column>
+        <!-- column header -->
+        <f:facet name="header">Étudiant N°</f:facet>
+        <!-- row record attribute -->
+        <h:link outcome="etudiant" >
+            <f:param name="id" value="#{s.id}" />
+            #{s.id}
+        </h:link>
     </h:column>
 
     <h:column>
@@ -53,7 +55,8 @@
         <f:facet name="header">Téléphone</f:facet>
         #{s.phoneNumber}
     </h:column>
-    -->
+             
+
     </h:dataTable>
 
     
